@@ -6,6 +6,7 @@ compiler:
 
 script:
   - sudo apt-get install libsdl2-dev
+  - dpkg --get-selections | grep hold
   - mkdir build
   - cd build
   - cmake ..
