@@ -7,6 +7,8 @@ compiler:
   - clang
 
 script:
+  - sudo apt update
+  - sudo apt upgrade
   - sudo apt-get install libsdl2-dev
   - dpkg --get-selections | grep hold
   - mkdir build
