@@ -5,6 +5,7 @@ compiler:
   - clang
 
 script:
+  - sudo apt-get install apt-get install libsdl2-dev
   - mkdir build
   - cd build
   - cmake ..
