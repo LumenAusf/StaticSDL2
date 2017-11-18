@@ -7,8 +7,8 @@ compiler:
   - clang
 
 script:
-  - sudo apt update
-  - sudo apt upgrade
+  - sudo apt-get install libegl1-mesa-dev
+  - sudo apt-get install libgles2-mesa-dev
   - sudo apt-get install libsdl2-dev
   - dpkg --get-selections | grep hold
   - mkdir build
