@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(StaticSdl2)
+set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/../)
+include_directories(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
+add_executable(${PROJECT_NAME} "main.cpp")
+find_library(SDL2_LIB libSDL2.a)
+target_link_libraries(${PROJECT_NAME}
+    "${SDL2_LIB}"
+    -Wl,--no-undefined
+                   -lm
+                   -ldl
+                   -lpthread
+                   -lrt
+                   -lsndio)
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
