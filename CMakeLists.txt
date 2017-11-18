@@ -12,5 +12,5 @@ target_link_libraries(${PROJECT_NAME}
                    -ldl
                    -lpthread
                    -lrt
-                   -lsndio)
+                   )
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)
